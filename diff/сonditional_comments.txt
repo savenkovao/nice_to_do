@@ -1,0 +1,8 @@
+http://htmlbook.ru/samlayout/internet-explorer/uslovnye-kommentarii
+
+<!--[if условие]> невидимый HTML-код <![endif]-->
+
+
+[if lte IE 8] Все версии младше IE9.
+lte	Оператор «Меньше или равно».
+Условие истинно, если версия младше указанной или совпадает с ней.

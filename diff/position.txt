@@ -1,0 +1,6 @@
+position
+
+для ie
+Обнулить значиенте:
+top/bottom/left/right: auto;
+в ie НЕТ значения initial

@@ -1,0 +1,20 @@
+git status
+git init
+
+git add .                   - add file to 'Tracked'
+git reset name              - remove file from 'Tracked'
+git commit -m '...'        - add file to local git directory (repository)
+git commit -a -m '...'     - git add . + git commit -m '...'
+
+
+git branch name
+git checkout name
+git checkout -b name
+git checkout -d name      - remove branch
+git checkout -D name      - force remove branch
+
+git merge name
+
+
+
+

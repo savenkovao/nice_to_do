@@ -1,0 +1,58 @@
+https://www.youtube.com/watch?v=Wpglfz7aXzo&list=PLQJNT2fdCJngOj0mGZaTcZRyfSBTCWHe1&index=2
+(перед flex поставить float или inline-block).
+В старых браузерах не должно быть точно так же, должен сохраняться общий вид 
+
+flex ie9
+_________________________________________________
+
+----------CSS------------------
+
+@media (max-width: 768px) {
+      .header {
+        display: block;
+      }
+      .hdr-logo,
+      .hdr-order {
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+  }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .hdr-logo {
+
+    display: inline-block;
+    width: 49%;
+    flex-basis: 50%;
+  }
+
+  .hdr-order {
+    display: inline-block;
+    width: 49%;
+    flex-basis: 50%;
+    text-align: right;
+  }
+
+.hdr-order-cont {
+  display: inline-block;
+  text-align: left;
+}
+
+------------HTML--------------
+
+<header class="header">
+
+    <div class="hdr-logo"></div>
+
+    <div class="hdr-order">
+        <div class="hdr-order-cont"></div>
+    </div>
+
+</header>

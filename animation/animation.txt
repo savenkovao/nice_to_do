@@ -1,0 +1,62 @@
+css animation
+
+.progress {
+	position: relative;
+	width: 20px;
+	height: 15px;
+	background-color: blue;
+	border 2px solid black;
+	animation-name: ballAnimation;
+	animation-duration: 10s;
+	animation-iteration-count: 3;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes ballAnimation {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100% - 20px);
+	}
+}
+
+___________________________________________________
+
+jQuery
+
+hide()
+show()
+toggle()
+fadeIn()
+fadeOut()
+fadeTo()
+fadeToggle()
+slideUp()
+slideDown()
+slideToggle()
+
+$('#animate-p').on('click', function(){
+	console.log('animate me');
+	$('#animated-p').animate({
+		width: [ "toggle", "swing" ],
+    height: [ "toggle", "linear" ],
+    opacity: "toggle"
+	}, 500, function(){
+		console.log('animation complete');
+	});
+});
+
+
+___________________________________________________
+
+animate.css + wow.js
+
+https://daneden.github.io/animate.css/
+http://mynameismatthieu.com/WOW/
+
+___________________________________________________
+Other
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		.product {
+			display: block;
+			margin-top: 10px;
+		}
+
+		.buy-modal {
+			display: none;
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			padding: 10px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+			background-color: #74ffaf;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="products">
+		<button class="btn product" data-id="1">1</button>
+		<button class="btn product" data-id="2">2</button>
+		<button class="btn product" data-id="3">3</button>
+		<button class="btn product" data-id="4">4</button>
+	</div>
+
+	<div class="basket">
+		<h3 class="basket__title">Корзина</h3>
+		<ul class="basket__products-list"></ul>
+	</div>
+
+	<div class="buy-modal">
+		<h3 class="buy-modal__title">Поздравляем!</h3>
+		<p class="buy-modal__message"></p>
+	</div>
+
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	  <script src="js/observer.js"></script>
+</body>
+</html>

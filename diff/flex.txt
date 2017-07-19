@@ -1,0 +1,45 @@
+flex-контейнер
+__________________________________
+
+flex-direction
+justify-content
+align-items      - выранвивание элементов 1 строки
+align-content    - выранвивание многострочное
+flex-wrap
+
+Сокращение
+flex-flow = flex-direction + flex-wrap
+
+
+
+flex-блок
+_________________________________
+
+flex-grow   – “жадность” отдельно взятого flex-блока
+flex-shrink - фактор “сжимаемости” отдельно взятого flex-блока
+flex-basis  – базовый размер отдельно взятого flex-блока
+align-self  – выравнивание отдельно взятого flex-блока по поперечной оси
+order       – порядок следования отдельно взятого блока внутри контейнера
+
+Сокращение
+flex = flex-grow + flex-shrink + flex-basis
+(соотношение дочерних элементов между собой)
+
+
+
+Другое
+_________________________________
+margin: auto; -  выравнивание по вертикали. Мечты сбываются!
+margin не схлопываетя и не выпадает (no margin collapse)
+
+
+Поддержка
+_________________________________
+IE 11 requires a unit to be added to the third argument, the flex-basis property
+
+In IE10 and IE11, containers with display: flex and flex-direction: column will not properly calculate their flexed childrens' sizes if the container has min-height but no explicit height property
+
+IE 11 does not vertically align items correctly when min-height is used
+
+In IE10 the default value for flex is 0 0 auto rather than 0 1 auto as defined in the latest spec
+

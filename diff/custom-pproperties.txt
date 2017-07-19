@@ -1,0 +1,33 @@
+:root {
+	--myColor: tomato;
+	--fontSize: 10pt;
+}
+
+.box-6 {
+	background-color: var(--myColor, blue);
+}
+
+.box-6-1 {
+	--myColor: red;
+	background-color: var(--myColor, blue);
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		--myColor: black;
+	}
+
+	.box-6-3 {
+		--myColor: lavender;
+	}
+
+}
+
+	<script>
+		function foo() {
+			var elem = document.querySelector(':root');
+			var styles = getComputedStyle(document.querySelector(':root'));
+			var oldColor = styles.getPropertyValue('--myColor');
+			elem.style.setProperty('--myColor', 'aqua');
+		}
+	</script>

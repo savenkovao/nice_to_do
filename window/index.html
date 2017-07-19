@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<button class="btn" onclick="window.location.reload()">reload page</button>
+<button class="btn" onclick="window.history.back()">previous page</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script>
+        var $body = $('body');
+        var version = window.navigator.appVersion;
+        var storage = window.localStorage;
+        storage.myVar = 23;
+        var myLocation={};
+        getMyLocation();
+
+        function getMyLocation() {
+
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var x = position.coords.latitude;
+                var y = position.coords.longitude;
+                var myLoc = {
+                    x: x,
+                    y: y
+                };
+
+                myLocation = myLoc;
+                console.log(myLoc);
+                var myLocationStr = '';
+
+                for (var key in myLocation) {
+                    myLocationStr += key + ' = ' + myLocation[key].toFixed(2)+ '; ';
+                }
+
+                $body.append( $('<p></p>').text(myLocationStr));
+            });
+        }
+
+        navigator.getBattery().then(function(battery) {
+            $body.append( $('<p></p>').text(battery.level) );
+            $body.append( $('<p></p>').text(battery.charging) );
+        });
+
+        $body.append( $('<p></p>').text(version) );
+        $body.append( $('<p></p>').text( storage.myVar) );
+
+        window.onclose = resetThatServerThing();
+         function resetThatServerThing () {
+            alert('Не уходи');
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+New... - Alt+Insert
+Settings - Ctrl+Alt+S
+Tabs nav - Alt + Left/Right
+Scroll to Center	Ctrl+M
+
+Delete Line at Caret	Ctrl+Y
+Move block - Ctrl + Shift + Up/Down
+Move line - Ctrl + Alt + Up/Down
+
+Move to Code Block End/Start - Ctrl+Close/Open Bracket

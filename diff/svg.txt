@@ -1,0 +1,20 @@
+.block {
+	background-image: url(image.png);
+	background-image: url(image.svg);
+}
+
+
+
+
+
+
+
+
+
+
+Слабая поддержка (-ie, -android, safari 9+, Chrome/moz 38+, opera 25+, edge 13+)
+_________________________________________________
+<picture>
+   <source srcset="image/html5-logo.svg">
+   <img src="image/html5-logo.png" width="256" height="256" alt="HTML5">
+</picture> 

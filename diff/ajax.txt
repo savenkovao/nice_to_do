@@ -1,0 +1,73 @@
+$('#ajax-btn-1').bind("click", function() {
+	$.ajax({
+		// url: 'ajax/user.json',
+		url: 'ajax/login.php',
+		type: 'POST',
+		data: ({name:'Admin', age:123}),
+		dataType: 'html',
+		beforeSend: function() {
+			$('#loader').fadeIn();
+		},
+		success: function(res) { 
+			// setTimeout(function(){
+				$('#loader').fadeOut();   				
+				$('#ajax-resp-1').html(res);
+			// }, 800);
+		 }
+	})
+});
+
+________________________________________________
+
+$('#ajax-btn').click(function(){
+	$.post('ajax/example.html').then(
+  	function(res){
+  		$('#loader').fadeIn();
+  		var user = JSON.parse(res);
+  		var users = JSON.parse(res);
+
+			setTimeout(function(){
+    		$('#loader').fadeOut();
+
+    		var data='<table>';
+
+    		$.each(users, function(i, item){
+    			data+=`	
+    					<tr>
+								<td>${item.name}</td>
+								<td>${item.surname}</td>
+								<td>${item.age}</td>
+								<td>${item.sex}</td>								
+							</tr>
+    			`;
+    		});
+    		$('#ajax-resp').html(data+'</table>');
+
+  		}, 1000);
+  		
+  	},
+  	function(req){
+  		console.log(req.status);		    			    		
+  		$('#loader').fadeOut();
+  	});
+    
+});
+
+________________________________________________
+
+$('#get-btn').on('click', function(){
+
+	$.get('ajax/get-serv.php',
+		{ name: $('#input-get').val() }
+
+		).then(
+			function(res){
+				$('#get-cont').html( $('#get-cont').html()+res );
+			},
+			function(req){
+				console.log(req.status);
+			}
+		)
+});
+
+________________________________________________
